@@ -55,6 +55,7 @@ fun DesktopWebView(
                         isVisible = true
                         engine.addLoadListener(state, navigator)
                         engine.isJavaScriptEnabled = state.webSettings.isJavaScriptEnabled
+                        engine.userAgent = state.webSettings.customUserAgentString
                     }
                     val root = StackPane()
                     root.children.add(webView)
